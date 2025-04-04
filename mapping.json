@@ -1,0 +1,554 @@
+{
+    "investments": [
+      {
+        "investment_name": "UNIVERSAL MUSIC GROUP NV",
+        "ticker": "Not Explicitly Provided",
+        "company_country": "Netherlands",
+        "area_of_work": "Music and Entertainment"
+      },
+      {
+        "investment_name": "3BRAVALO - TRUXT BRAZIL VALOR - - CITCO - 1498303 VENC.: 26/12/2050",
+        "ticker": "Not Explicitly Provided",
+        "company_country": "Brazil",
+        "area_of_work": "Investment Fund"
+      },
+      {
+        "investment_name": "GRAYSCALE BITCOIN TRUST BTC",
+        "ticker": "GBTC",
+        "company_country": "USA",
+        "area_of_work": "Cryptocurrency Investment"
+      },
+      {
+        "investment_name": "SHP FUND SPC CLASS C.",
+        "ticker": "Not Explicitly Provided",
+        "company_country": "Cayman Islands",
+        "area_of_work": "Investment Fund"
+      },
+      {
+        "investment_name": "MELI US - MERCADOLIBRE INC - 262 VENC.: 31/12/2049",
+        "alternative_names": ["MercadoLibre", "MELI", "MELI34", "MELI US"],
+        "ticker": "MELI",
+        "company_country": "Argentina",
+        "area_of_work": "E-commerce and Technology"
+      },
+      {
+        "investment_name": "VIST US - VISTA OIL & GAS SAB DE CV - 25300 VENC.: 31/12/2049",
+        "ticker": "VIST",
+        "company_country": "Mexico",
+        "area_of_work": "Oil and Gas"
+      },
+      {
+        "investment_name": "AFYA US - AFYA LTD-CLASS A - 31200 VENC.: 31/12/2049",
+        "ticker": "AFYA",
+        "company_country": "Brazil",
+        "area_of_work": "Education Technology"
+      },
+      {
+        "investment_name": "MERCADOLIBRE INC",
+        "ticker": "MELI",
+        "company_country": "Argentina",
+        "area_of_work": "E-commerce and Technology"
+      },
+      {
+        "investment_name": "VANGUARD SP 500 UCITS ETF",
+        "ticker": "Not Explicitly Provided",
+        "company_country": "USA",
+        "area_of_work": "Index Fund (S&P 500)"
+      },
+      {
+        "investment_name": "ISHARES CORE SP 500 UCITS ETF",
+        "ticker": "Not Explicitly Provided",
+        "company_country": "USA",
+        "area_of_work": "Index Fund (S&P 500)"
+      },
+      {
+        "investment_name": "VISA INC",
+        "ticker": "V",
+        "company_country": "USA",
+        "area_of_work": "Financial Services"
+      },
+      {
+        "investment_name": "META PLATFORMS INC",
+        "alternative_names": ["META", "META34", "META32", "M1TA"],
+        "ticker": "META",
+        "company_country": "USA",
+        "area_of_work": "Technology and Social Media"
+      },
+      {
+        "investment_name": "MASTERCARD INC",
+        "alternative_names": ["Mastercard", "MA", "MA34", "MA32", "MA33", "MSCD34", "MSCD33", "MSCD32"],
+        "ticker": "MA",
+        "company_country": "USA",
+        "area_of_work": "Financial Services"
+      },
+      {
+        "investment_name": "BNYM US TREAS SERVIC",
+        "ticker": "Not Explicitly Provided",
+        "company_country": "USA",
+        "area_of_work": "Treasury Services"
+      },
+      {
+        "investment_name": "IP PART INTL CL",
+        "ticker": "Not Explicitly Provided",
+        "company_country": "International",
+        "area_of_work": "Investment Fund"
+      },
+      {
+        "investment_name": "VTEX",
+        "ticker": "VTEX",
+        "company_country": "Brazil",
+        "area_of_work": "E-commerce Platform"
+      },
+      {
+        "investment_name": "ARCOS DORADOS HOLDINGS INC-A",
+        "ticker": "ARCO",
+        "company_country": "Uruguay",
+        "area_of_work": "Food and Beverage (McDonald's Franchise)"
+      },
+      {
+        "investment_name": "PPC US - PILGRIM'S PRIDE CORP - 9200 VENC.: 31/12/2049",
+        "ticker": "PPC",
+        "company_country": "USA",
+        "area_of_work": "Food Production (Poultry)"
+      },
+      {
+        "investment_name": "OCN LN - INDETERMINADO - 85125 VENC.: 31/12/2049",
+        "ticker": "OCN",
+        "company_country": "USA",
+        "area_of_work": "Financial Services"
+      },
+      {
+        "investment_name": "K CLASS C USD",
+        "ticker": "Not Explicitly Provided",
+        "company_country": "International",
+        "area_of_work": "Investment Fund"
+      },
+      {
+        "investment_name": "COINBASE GLOBAL INC",
+        "alternative_names": ["Coinbase"],
+        "ticker": "COIN",
+        "company_country": "USA",
+        "area_of_work": "Cryptocurrency Exchange"
+      },
+      {
+        "investment_name": "A P MOLLER - MAERSK A/S - B",
+        "ticker": "AMKBY",
+        "company_country": "Denmark",
+        "area_of_work": "Shipping and Logistics"
+      },
+      {
+        "investment_name": "3SPXEQU2 - SPX FUND SPC EQUITIE - - SPXI - 2870,98738 VENC.: 31/12/2050",
+        "ticker": "SPXI",
+        "company_country": "Cayman Islands",
+        "area_of_work": "Equity Fund"
+      },
+      {
+        "investment_name": "AIRBNB INC",
+        "ticker": "ABNB",
+        "company_country": "USA",
+        "area_of_work": "Travel and Hospitality"
+      },
+      {
+        "investment_name": "CINT US - CI&T INC/UNITED STATES - 33950 VENC.: 31/12/2049",
+        "ticker": "CINT",
+        "company_country": "USA",
+        "area_of_work": "IT Services"
+      },
+      {
+        "investment_name": "3VAFUNDL - VA FUND LTD - KYG93A0A1060 - VERDE - 15113,50181 VENC.: 23/12/2050",
+        "ticker": "Not Explicitly Provided",
+        "company_country": "Cayman Islands",
+        "area_of_work": "Investment Fund"
+      },
+      {
+        "investment_name": "NVIDIA CORP",
+        "ticker": "NVDA",
+        "company_country": "USA",
+        "area_of_work": "Semiconductors and Artificial Intelligence"
+      },
+      {
+        "investment_name": "TSMC",
+        "ticker": "TSM",
+        "company_country": "Taiwan",
+        "area_of_work": "Semiconductor Manufacturing"
+      },
+      {
+        "investment_name": "FED HERMES ST DAILY",
+        "ticker": "Not Explicitly Provided",
+        "company_country": "USA",
+        "area_of_work": "Investment Management"
+      },
+      {
+        "investment_name": "LVMH MOET HENNESSY LOUIS VUITT",
+        "ticker": "LVMUY",
+        "company_country": "France",
+        "area_of_work": "Luxury Goods"
+      },
+      {
+        "investment_name": "LONG-ONLY CLASS SHARES",
+        "ticker": "Not Explicitly Provided",
+        "company_country": "International",
+        "area_of_work": "Investment Fund"
+      },
+      {
+        "investment_name": "XP INC",
+        "alternative_names": ["XPBR31"],
+        "ticker": "XPBR",
+        "company_country": "Brazil",
+        "area_of_work": "Financial Services"
+      },
+      {
+        "investment_name": "MAHA ENERGY AB",
+        "ticker": "MAHA",
+        "company_country": "Sweden",
+        "area_of_work": "Oil and Gas"
+      },
+      {
+        "investment_name": "AES CORP/THE",
+        "ticker": "AES",
+        "company_country": "USA",
+        "area_of_work": "Energy and Utilities"
+      },
+      {
+        "investment_name": "GOOGLE",
+        "alternative_names": ["Google", "GOOG", "GOOGL", "GOGL"],
+        "ticker": "GOOGL",
+        "company_country": "USA",
+        "area_of_work": "Technology and Search Engine"
+      },
+      {
+        "investment_name": "DLOCAL LTD/URUGUAY",
+        "ticker": "DLO",
+        "company_country": "Uruguay",
+        "area_of_work": "Payment Processing"
+      },
+      {
+        "investment_name": "CIT INC/UNITED STATES",
+        "ticker": "CIT",
+        "company_country": "USA",
+        "area_of_work": "Banking and Financial Services"
+      },
+      {
+        "investment_name": "STONECO LTD.",
+        "ticker": "STNE",
+        "company_country": "Brazil",
+        "area_of_work": "Financial Technology"
+      },
+      {
+        "investment_name": "NU HOLDINGS LTD CAYMAN ISLANDS",
+        "ticker": "NU",
+        "company_country": "Cayman Islands",
+        "area_of_work": "Digital Banking"
+      },
+      {
+        "investment_name": "SP GLOBAL INC",
+        "ticker": "SPGI",
+        "company_country": "USA",
+        "area_of_work": "Financial Information Services"
+      },
+      {
+        "investment_name": "AMAZON.COM INC",
+        "alternative_names": ["Amazon", "AMZN", "AMZO"], 
+        "ticker": "AMZN",
+        "company_country": "USA",
+        "area_of_work": "E-commerce and Cloud Computing"
+      },
+      {
+        "investment_name": "THERMO FISHER SCIENTIFIC INC",
+        "ticker": "TMO",
+        "company_country": "USA",
+        "area_of_work": "Life Sciences and Healthcare"
+      },
+      {
+        "investment_name": "OFFSHORE VENC.: 20/09/2024",
+        "ticker": "Not Explicitly Provided",
+        "company_country": "International",
+        "area_of_work": "Offshore Investment"
+      },
+      {
+        "investment_name": "XP INC. CAYMAN",
+        "ticker": "XP",
+        "company_country": "Cayman Islands",
+        "area_of_work": "Financial Services"
+      },
+      {
+        "investment_name": "STNE US - STONECO LTD - 30100 VENC.: 31/12/2049",
+        "alternative_names": ["STONECO", "STNE"],
+        "ticker": "STNE",
+        "company_country": "Brazil",
+        "area_of_work": "Financial Technology"
+      },
+      {
+        "investment_name": "REPUBLIC OF ARG VENC.: 09/01/2038",
+        "alternative_names": ["REPUBLIC OF ARG"],
+        "ticker": "Bonds",
+        "company_country": "Argentina",
+        "area_of_work": "Government Bonds"
+      },
+      {
+        "investment_name": "BANCO INTER S.A.",
+        "alternative_names": ["BIDI", "INTER CO", "INBR32", "BIDI32", "INBR34"],
+        "ticker": "BIDI",
+        "company_country": "Brazil",
+        "area_of_work": "Banking and Financial Services"
+      },
+      {
+        "investment_name": "TEMPUS LOGICA CLASS",
+        "ticker": "Fundo",
+        "company_country": "International",
+        "area_of_work": "Investment Fund"
+      },
+      {
+        "investment_name": "MICRON TECHNOLOGY INC",
+        "ticker": "MU",
+        "company_country": "USA",
+        "area_of_work": "Semiconductor Manufacturing"
+      },
+      {
+        "investment_name": "OCN LN - INDETERMINADO - 55434 VENC.: 31/12/2049",
+        "ticker": "OCN",
+        "company_country": "USA",
+        "area_of_work": "Financial Services"
+      },
+      {
+        "investment_name": "NU BANK",
+        "alternative_names": ["NU ", "NUBR", "ROXO"],
+        "ticker": "NU",
+        "company_country": "Brazil",
+        "area_of_work": "Digital Banking"
+      },
+      {
+        "investment_name": "TERNIUM SA",
+        "ticker": "TX",
+        "company_country": "Luxembourg",
+        "area_of_work": "Steel Manufacturing"
+      },
+      {
+        "investment_name": "YPF US - YPF S.A - SPONSORED ADR - 16300 VENC.: 31/12/2049",
+        "ticker": "YPF",
+        "company_country": "Argentina",
+        "area_of_work": "Energy and Utilities"
+      },
+      {
+        "investment_name": "PPC US - PILGRIM'S PRIDE CORP - 12500 VENC.: 31/12/2049",
+        "ticker": "PPC",
+        "company_country": "USA",
+        "area_of_work": "Food Production (Poultry)"
+      },
+      {
+        "investment_name": "MICROSOFT CORPORATION",
+        "alternative_names": ["Microsoft", "MSFT", "MICROSOFT"],
+        "ticker": "MSFT",
+        "company_country": "USA",
+        "area_of_work": "Technology and Software"
+      },
+      {
+        "investment_name": "UBER TECHNOLOGIES INC",
+        "ticker": "UBER",
+        "company_country": "USA",
+        "area_of_work": "Transportation and Ride-Sharing"
+      },
+      {
+        "investment_name": "OFFSHORE",
+        "alternative_names": ["OFFSHORE VENC.: 19/07/2024"],
+        "ticker": "Fundo",
+        "company_country": "International",
+        "area_of_work": "Offshore Investment"
+      },
+      {
+        "investment_name": "AFYA US - AFYA LTD-CLASS A - 20200 VENC.: 31/12/2049",
+        "ticker": "AFYA",
+        "company_country": "Brazil",
+        "area_of_work": "Education Technology"
+      },
+      {
+        "investment_name": "CLAVE CAPITAL INT FUND SPC - EQ SP",
+        "ticker": "Fundo",
+        "company_country": "International",
+        "area_of_work": "Investment Fund"
+      },
+      {
+        "investment_name": "DYNAMO COUGAR MASTER",
+        "ticker": "Fundo",
+        "company_country": "International",
+        "area_of_work": "Investment Fund"
+      },
+      {
+        "investment_name": "XP US - XP INC - CLASS A - 24884 VENC.: 31/12/2049",
+        "alternative_names": ["XP", "XP INC"],
+        "ticker": "XPBR",
+        "company_country": "Brazil",
+        "area_of_work": "Financial Services"
+      },
+      {
+        "investment_name": "COMPANHIA VALE DO RIO DOCE",
+        "ticker": "VALE",
+        "company_country": "Brazil",
+        "area_of_work": "Mining and Metals"
+      },
+      {
+        "investment_name": "XLE US - ENERGY SELECT SECTOR SPDR - 6000 VENC.: 31/12/2049",
+        "ticker": "XLE",
+        "company_country": "USA",
+        "area_of_work": "Energy Sector ETF"
+      },
+      {
+        "investment_name": "ISHARES BITCOIN TRUST",
+        "ticker": "BTC",
+        "company_country": "USA",
+        "area_of_work": "Cryptocurrency Investment"
+      },
+      {
+        "investment_name": "VM HOLDING SA",
+        "ticker": "Fundo",
+        "company_country": "Italy",
+        "area_of_work": "Automotive"
+      },
+      {
+        "investment_name": "JGP OFFSHORE CLASS D",
+        "ticker": "Fundo",
+        "company_country": "International",
+        "area_of_work": "Investment Fund"
+      },
+      {
+        "investment_name": "VASTA PLATFORM LTD",
+        "ticker": "VSTA",
+        "company_country": "Brazil",
+        "area_of_work": "Education Technology"
+      },
+      {
+        "investment_name": "ATMOS FUND LTD.",
+        "ticker": "Fundo",
+        "company_country": "International",
+        "area_of_work": "Investment Fund"
+      },
+      {
+        "investment_name": "TORK FUND SPC CLASS A",
+        "ticker": "Fundo",
+        "company_country": "International",
+        "area_of_work": "Investment Fund"
+      },
+      {
+        "investment_name": "NETFLIX INC",
+        "alternative_names": ["Netflix", "NFLX"],
+        "ticker": "NFLX",
+        "company_country": "USA",
+        "area_of_work": "Entertainment and Streaming"
+      },
+      {
+        "investment_name": "BLACKROCK INC",
+        "ticker": "BLK",
+        "company_country": "USA",
+        "area_of_work": "Investment Management"
+      },
+      {
+        "investment_name": "SIGMA LITHIUM CORP",
+        "ticker": "SGML",
+        "company_country": "Canada",
+        "area_of_work": "Lithium Mining"
+      },
+      {
+        "investment_name": "FED HERMES US CASH",
+        "ticker": "Fundo",
+        "company_country": "USA",
+        "area_of_work": "Cash Management"
+      },
+      {
+        "investment_name": "BTG PACTUAL INTL PORT FD II ABSOLUTO PARTNERS OFF",
+        "ticker": "Fundo",
+        "company_country": "International",
+        "area_of_work": "Investment Fund"
+      },
+      {
+        "investment_name": "AMBIPAR EMERGENCY RESPONSE",
+        "alternative_names": ["AMBIPAR"],
+        "ticker": "AMBI",
+        "company_country": "Brazil",
+        "area_of_work": "Emergency Response"
+      },
+      {
+        "investment_name": "NORTE LONG ONLY SP",
+        "alternative_names": ["NORTE LONG"],
+        "ticker": "Fundo",
+        "company_country": "Brazil",
+        "area_of_work": "Investment Fund"
+      },
+      {
+        "investment_name": "3SPXEQU2",
+        "alternative_names": ["3SPXEQU2"],
+        "ticker": "Fundo",
+        "company_country": "Brazil",
+        "area_of_work": "Investment Fund"
+      },
+      {
+        "investment_name": "OCCIDENTAL PETROLEUM CORP",
+        "alternative_names": ["OXY", "OXYP"],
+        "ticker": "OXY",
+        "company_country": "USA",
+        "area_of_work": "Oil and Gas"
+      },
+      {
+        "investment_name": "3BRAVALO - TRUXT BRAZIL VALOR - - CITCO - 1498303 VENC.: 26/12/2050",
+        "alternative_names": ["3BRAVALO", "TRUXT BRAZIL VALOR"],
+        "ticker": "Fundo",
+        "company_country": "Brazil",
+        "area_of_work": "Investment Fund"
+      },
+      {
+        "investment_name": "3VAFUNDL - VA FUND LTD - KYG93A0A1060 - VERDE",
+        "alternative_names": ["3VAFUNDL, VA FUND LTD"],
+        "ticker": "Fundo",
+        "company_country": "Brazil",
+        "area_of_work": "Investment Fund"
+      },
+      {
+        "investment_name": " CINT US - CI&T INC/UNITED STATES",
+        "alternative_names": ["CINT"],
+        "ticker": "CINT",
+        "company_country": "USA",
+        "area_of_work": "IT Services"
+      },
+      {
+        "investment_name": "VIST US - VISTA OIL & GAS",
+        "alternative_names": ["VIST"],
+        "ticker": "VIST",
+        "company_country": "Mexico",
+        "area_of_work": "Oil and Gas"
+      },
+      {
+        "investment_name": "TRANSDIGM GROUP INC",
+        "alternative_names": ["TRANSDIGM"],
+        "ticker": "TDG",
+        "company_country": "USA",
+        "area_of_work": "Aerospace and Defense"
+      },
+      {
+        "investment_name": "PAGSEGURO DIGITAL LTDA",
+        "alternative_names": ["PAGSEGURO", "PAGS34"],
+        "ticker": "PAGS",
+        "company_country": "Brazil",
+        "area_of_work": "Financial Services"
+      },
+      {
+        "investment_name": "AURA MINERALS INC",
+        "alternative_names": ["AURA MINERALS", "AURA33", "AURA34", "AURA32"],
+        "ticker": "AURA",
+        "company_country": "Canada",
+        "area_of_work": "Mining and Metals"
+      },
+      {
+        "investment_name": "AIRBNB INC",
+        "alternative_names": ["AIRBNB", "ABNB", "AIRB34", "AIRB32", "AIRB33", "ABNB34", "ABNB32", "ABNB33"],
+        "ticker": "ABNB",
+        "company_country": "USA",
+        "area_of_work": "Travel and Hospitality"
+      },
+      {
+        "investment_name": "TRANSDIGM GROUP INC",
+        "alternative_names": ["TRANSDIGM", "T1DG34", "T1DG33", "T1DG32", "TDG34", "TDG33", "TDG32"],
+        "ticker": "TDG",
+        "company_country": "USA",
+        "area_of_work": "Aerospace and Defense"
+      }
+    ]
+  }
