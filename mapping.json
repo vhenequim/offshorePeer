@@ -211,7 +211,7 @@
       },
       {
         "investment_name": "GOOGLE",
-        "alternative_names": ["Google", "GOOG", "GOOGL", "GOGL"],
+        "alternative_names": ["Google", "GOOG", "GOOGL", "GOGL", "ALPHABET", "Alphabet"],
         "ticker": "GOOGL",
         "company_country": "USA",
         "area_of_work": "Technology and Search Engine"
@@ -224,15 +224,10 @@
       },
       {
         "investment_name": "CIT INC/UNITED STATES",
+        "alternative_names": ["CIT INC", "CIT34", "CIT33", "CIT32"],
         "ticker": "CIT",
         "company_country": "USA",
         "area_of_work": "Banking and Financial Services"
-      },
-      {
-        "investment_name": "STONECO LTD.",
-        "ticker": "STNE",
-        "company_country": "Brazil",
-        "area_of_work": "Financial Technology"
       },
       {
         "investment_name": "NU HOLDINGS LTD CAYMAN ISLANDS",
@@ -261,7 +256,7 @@
       },
       {
         "investment_name": "OFFSHORE VENC.: 20/09/2024",
-        "ticker": "Not Explicitly Provided",
+        "ticker": "Fundo",
         "company_country": "International",
         "area_of_work": "Offshore Investment"
       },
@@ -272,14 +267,14 @@
         "area_of_work": "Financial Services"
       },
       {
-        "investment_name": "STNE US - STONECO LTD - 30100 VENC.: 31/12/2049",
-        "alternative_names": ["STONECO", "STNE"],
+        "investment_name": "STNE US - STONECO LTD",
+        "alternative_names": ["STONECO", "STNE", "STOC31"],
         "ticker": "STNE",
         "company_country": "Brazil",
         "area_of_work": "Financial Technology"
       },
       {
-        "investment_name": "REPUBLIC OF ARG VENC.: 09/01/2038",
+        "investment_name": "REPUBLIC OF ARG VENC",
         "alternative_names": ["REPUBLIC OF ARG"],
         "ticker": "Bonds",
         "company_country": "Argentina",
@@ -287,7 +282,7 @@
       },
       {
         "investment_name": "BANCO INTER S.A.",
-        "alternative_names": ["BIDI", "INTER CO", "INBR32", "BIDI32", "INBR34"],
+        "alternative_names": ["BIDI", "INTER CO","INTER & CO", "INBR32", "BIDI32", "INBR34"],
         "ticker": "BIDI",
         "company_country": "Brazil",
         "area_of_work": "Banking and Financial Services"
@@ -324,13 +319,13 @@
         "area_of_work": "Steel Manufacturing"
       },
       {
-        "investment_name": "YPF US - YPF S.A - SPONSORED ADR - 16300 VENC.: 31/12/2049",
+        "investment_name": "YPF US - YPF S.A - SPONSORED ADR",
         "ticker": "YPF",
         "company_country": "Argentina",
         "area_of_work": "Energy and Utilities"
       },
       {
-        "investment_name": "PPC US - PILGRIM'S PRIDE CORP - 12500 VENC.: 31/12/2049",
+        "investment_name": "PPC US - PILGRIM'S PRIDE CORP",
         "ticker": "PPC",
         "company_country": "USA",
         "area_of_work": "Food Production (Poultry)"
@@ -356,7 +351,7 @@
         "area_of_work": "Offshore Investment"
       },
       {
-        "investment_name": "AFYA US - AFYA LTD-CLASS A - 20200 VENC.: 31/12/2049",
+        "investment_name": "AFYA US - AFYA LTD-CLASS A",
         "ticker": "AFYA",
         "company_country": "Brazil",
         "area_of_work": "Education Technology"
@@ -449,9 +444,10 @@
       },
       {
         "investment_name": "FED HERMES US CASH",
+        "alternative_names": ["FED HERMES US CASH", "FED HERMES"],
         "ticker": "Fundo",
         "company_country": "USA",
-        "area_of_work": "Cash Management"
+        "area_of_work": "Investment Management"
       },
       {
         "investment_name": "BTG PACTUAL INTL PORT FD II ABSOLUTO PARTNERS OFF",
@@ -475,7 +471,7 @@
       },
       {
         "investment_name": "3SPXEQU2",
-        "alternative_names": ["3SPXEQU2"],
+        "alternative_names": ["3SPXEQU2", "SPXEQU2", "SPXI"],
         "ticker": "Fundo",
         "company_country": "Brazil",
         "area_of_work": "Investment Fund"
@@ -496,7 +492,7 @@
       },
       {
         "investment_name": "3VAFUNDL - VA FUND LTD - KYG93A0A1060 - VERDE",
-        "alternative_names": ["3VAFUNDL, VA FUND LTD"],
+        "alternative_names": ["3VAFUNDL", " VA FUND LTD", "VERDE"],
         "ticker": "Fundo",
         "company_country": "Brazil",
         "area_of_work": "Investment Fund"
@@ -549,6 +545,517 @@
         "ticker": "TDG",
         "company_country": "USA",
         "area_of_work": "Aerospace and Defense"
+      },
+      {
+        "investment_name": "CITCO",
+        "alternative_names": ["CITCO"],
+        "ticker": "Fundo",
+        "company_country": "International",
+        "area_of_work": "Investment Fund"
+      },
+      {
+        "investment_name": "CIA SUDAMERICANA DE VAPORES",
+        "alternative_names": ["CIA SUDAMERICANA DE VAPORES", "CSAV"],
+        "ticker": "CSAV",
+        "company_country": "Chile",
+        "area_of_work": "Shipping and Logistics"
+      },
+      {
+        "investment_name": "ZENVIA INC",
+        "alternative_names": ["ZENVIA"],
+        "ticker": "ZENV",
+        "company_country": "USA",
+        "area_of_work": "Technology and Software"
+      },
+      {
+        "investment_name": "TWDC ENTERPRISES",
+        "alternative_names": ["TWDC ENTERPRISES", "TWDC"],
+        "ticker": "TWDC",
+        "company_country": "USA",
+        "area_of_work": "Entertainment and Streaming"
+      },
+      {
+        "investment_name": "INVESCO QQQ",
+        "alternative_names": ["INVESCO QQQ", "QQQ"],
+        "ticker": "QQQ",
+        "company_country": "USA",
+        "area_of_work": "Technology and Software"
+      },
+      {
+        "investment_name": "OCEAN WILSONS HOLDINGS LTD",
+        "alternative_names": ["OCEAN WILSONS HOLDINGS LTD", "OCEAN WILSONS", "OCN"],
+        "ticker": "OCN",
+        "company_country": "USA",
+        "area_of_work": "Financial Services"
+      },
+      {
+        "investment_name": "CLAVE CAPITAL INTERNATIONAL FUND",
+        "alternative_names": ["CLAVE CAPITAL INTERNATIONAL FUND", "CLAVE CAPITAL INTERNATIONAL", "CLAVE CAPITAL"],
+        "ticker": "Fundo",
+        "company_country": "International",
+        "area_of_work": "Investment Fund"
+      },
+      {
+        "investment_name": "B2W DIGITAL LUX",
+        "alternative_names": ["B2W DIGITAL LUX", "B2W DIGITAL", "BTOW3"],
+        "ticker": "BTOW3",
+        "company_country": "Brazil",
+        "area_of_work": "E-commerce"
+      },
+      {
+        "investment_name": "NATURA COSMETICOS",
+        "alternative_names": ["NATURA COSMETICOS", "NATU34", "NATU33", "NATU32"],
+        "ticker": "NATU",
+        "company_country": "Brazil",
+        "area_of_work": "Cosmetics"
+      },
+      {
+        "investment_name": "Almacenes Exito Bd",
+        "alternative_names": ["Almacenes Exito Bd", "EXITO", "EXCO32", "EXCO33", "EXCO34"],
+        "ticker": "EXCO",
+        "company_country": "Colombia",
+        "area_of_work": "Retail"
+      },
+      {
+        "investment_name": "Ternium Sa Bdr",
+        "alternative_names": ["Ternium Sa Bdr", "TXSA34", "TXSA33", "TXSA32"],
+        "ticker": "TXSA",
+        "company_country": "Argentina",
+        "area_of_work": "Steel Manufacturing"
+      },
+      {
+        "investment_name": "Berkshire Hathaway",
+        "alternative_names": ["Berkshire Hathaway","BERKSHIRE", "BRK.B", "BRK.B34", "BRK.B33", "BRK.B32", "BERK34", "BERK33", "BERK32"],
+        "ticker": "BERK",
+        "company_country": "USA",
+        "area_of_work": "Insurance and Financial Services"
+      },
+      {
+        "investment_name": "TENARIS",
+        "alternative_names": ["TENARIS", "T1SS34", "T1SS33", "T1SS32", "T1SS"],
+        "ticker": "T1SS",
+        "company_country": "Brazil",
+        "area_of_work": "Banking and Financial Services"
+      },
+      {
+        "investment_name": "THE CHARLES SCHWAB CORPORATION",
+        "alternative_names": ["THE CHARLES SCHWAB CORPORATION", "SCHWAB", "SCHW34", "SCHW33", "SCHW32"],
+        "ticker": "SCHW",
+        "company_country": "USA",
+        "area_of_work": "Financial Services"
+      },
+      {
+        "investment_name": "Ishares Msci Emerging Markets Etf",
+        "alternative_names": ["Ishares Msci Emerging Markets Etf", "MSCI EM", "BEEM", "BEEM34", "BEEM33", "BEEM32"],
+        "ticker": "BEEM",
+        "company_country": "USA",
+        "area_of_work": "Financial Services"
+      },
+      {
+        "investment_name": "Liberty Broadband Corp",
+        "alternative_names": ["Liberty Broadband Corp", "LBRDK", "LBRD34", "LBRD33", "LBRD32"],
+        "ticker": "LBRD",
+        "company_country": "USA",
+        "area_of_work": "Telecomunications"
+      },
+      {
+        "investment_name": "Evertec Inc",
+        "alternative_names": ["Evertec Inc", "EVRTC", "EVTC34", "EVTC33", "EVTC31"],
+        "ticker": "EVTC",
+        "company_country": "USA",
+        "area_of_work": "Financial Services"
+      },
+      {
+        "investment_name": "Alibaba Group Holding Ltd",
+        "alternative_names": ["Alibaba Group Holding Ltd", "BABA", "BABA34", "BABA33", "BABA32"],
+        "ticker": "BABA",
+        "company_country": "China",
+        "area_of_work": "E-commerce and Technology"
+      },
+      {
+        "investment_name": "ANHEUSER BUSCH INBEV",
+        "alternative_names": ["ANHEUSER BUSCH INBEV", "ABI", "ABUD34", "ABUD33", "ABUD32"],
+        "ticker": "ABUD",
+        "company_country": "Belgium",
+        "area_of_work": "Food and Beverage"
+      },
+      {
+        "investment_name": "GERDAU",
+        "alternative_names": ["GERDAU", "GGBR", "GGBR34", "GGBR33", "GGBR32"],
+        "ticker": "GGBR",
+        "company_country": "Brazil",
+        "area_of_work": "Steel Manufacturing"
+      },
+      {
+        "investment_name": "TESLA",
+        "alternative_names": ["TESLA", "TSLA", "TSLA34", "TSLA33", "TSLA32"],
+        "ticker": "TSLA",
+        "company_country": "USA",
+        "area_of_work": "Automotive"
+      },
+      {
+        "investment_name": "BHP GROUP",
+        "alternative_names": ["BHP GROUP", "BHP", "BHP34", "BHP33", "BHP32"],
+        "ticker": "BHP",
+        "company_country": "Australia",
+        "area_of_work": "Mining and Metals"
+      },
+      {
+        "investment_name": "DANAHER CORP",
+        "alternative_names": ["DANAHER CORP", "DHER", "DHER34", "DHER33", "DHER32"],
+        "ticker": "DHER",
+        "company_country": "USA",
+        "area_of_work": "Industrial"
+      },
+      {
+        "investment_name": "CHARTER COMMUNICATIONS INC",
+        "alternative_names": ["CHARTER COMMUNICATIONS INC", "CHTR", "CHTR34", "CHTR33", "CHTR32"],
+        "ticker": "CHTR",
+        "company_country": "USA",
+        "area_of_work": "Telecomunications"
+      },
+      {
+        "investment_name": "LIBERTY BROADBAND CORP",
+        "alternative_names": ["LIBERTY BROADBAND CORP", "LBRDK", "LBRD34", "LBRD33", "LBRD32"],
+        "ticker": "LBRD",
+        "company_country": "USA",
+        "area_of_work": "Telecomunications"
+      },
+      {
+        "investment_name": "ACCENTURE PLC",
+        "alternative_names": ["ACCENTURE PLC", "ACN", "ACN34", "ACN33", "ACN32"],
+        "ticker": "ACN",
+        "company_country": "Ireland",
+        "area_of_work": "IT Services"
+      },
+      {
+        "investment_name": "BHP GROUP",
+        "alternative_names": ["BHP GROUP", "BHP", "BHP34", "BHP33", "BHP32"],
+        "ticker": "BHP",
+        "company_country": "Australia",
+        "area_of_work": "Mining and Metals"
+      },
+      {
+        "investment_name": "KAP INTER SPC SEGR C",
+        "alternative_names": ["KAP INTER SPC SEGR C", "KAPITALO"],
+        "ticker": "Fundo",
+        "company_country": "International",
+        "area_of_work": "Investment Fund"
+      },
+      {
+        "investment_name": "UNITED STATES OIL FUND LP",
+        "alternative_names": ["UNITED STATES OIL FUND LP", "USOF"],
+        "ticker": "USO",
+        "company_country": "USA",
+        "area_of_work": "Investment Fund"
+      },
+      {
+        "investment_name": "TEMPUR-PEDIC INTERNATIONAL INC",
+        "alternative_names": ["TEMPUR-PEDIC", "SOMNIGROUP", "SGI"],
+        "ticker": "SGI",
+        "company_country": "USA",
+        "area_of_work": "Investment Fund"
+      },
+      {
+        "investment_name": "ENERGY SELECT SECTOR SPDR",
+        "alternative_names": ["ENERGY SELECT SECTOR SPDR", "XLE"],
+        "ticker": "XLE",
+        "company_country": "USA",
+        "area_of_work": "Investment Fund"
+      },
+      {
+        "investment_name": "ROST US - ROSS STORES INC",
+        "alternative_names": ["ROST US - ROSS STORES INC", "ROST", "ROST34", "ROST33", "ROST32"],
+        "ticker": "ROST",
+        "company_country": "USA",
+        "area_of_work": "Retail"
+      },
+      {
+        "investment_name": "ROST US - ROSS STORES INC",
+        "alternative_names": ["ROST US - ROSS STORES INC", "ROST", "ROST34", "ROST33", "ROST32"],
+        "ticker": "ROST",
+        "company_country": "USA",
+        "area_of_work": "Retail"
+      },
+      {
+        "investment_name": "ELECTRONIC ARTS INC",
+        "alternative_names": ["EA US - ELECTRONIC ARTS INC", "EA"],
+        "ticker": "EA",
+        "company_country": "USA",
+        "area_of_work": "Gaming and Entertainment"
+      },
+      {
+        "investment_name": "TJX COS INC",
+        "alternative_names": ["TJX US - TJX COS INC", "TJX"],
+        "ticker": "TJX",
+        "company_country": "USA",
+        "area_of_work": "Retail"
+      },
+      {
+        "investment_name": "TRANE TECHNOLOGIES PLC",
+        "alternative_names": ["TT US - TRANE TECHNOLOGIES PLC", "TT"],
+        "ticker": "TT",
+        "company_country": "Ireland",
+        "area_of_work": "Industrial Manufacturing"
+      },
+      {
+        "investment_name": "COCA-COLA CO/THE",
+        "alternative_names": ["KO US - COCA-COLA CO/THE", "KO"],
+        "ticker": "KO",
+        "company_country": "USA",
+        "area_of_work": "Beverages"
+      },
+      {
+        "investment_name": "MOTOROLA SOLUTIONS INC",
+        "alternative_names": ["MSI US - MOTOROLA SOLUTIONS INC", "MSI"],
+        "ticker": "MSI",
+        "company_country": "USA",
+        "area_of_work": "Telecommunications"
+      },
+      {
+        "investment_name": "COSTCO WHOLESALE CORP",
+        "alternative_names": ["COST US - COSTCO WHOLESALE CORP", "COST"],
+        "ticker": "COST",
+        "company_country": "USA",
+        "area_of_work": "Retail"
+      },
+      {
+        "investment_name": "PROCTER & GAMBLE COMPANY",
+        "alternative_names": ["PG US - PROCTER & GAMBLE COMPANY", "PG"],
+        "ticker": "PG",
+        "company_country": "USA",
+        "area_of_work": "Consumer Goods"
+      },
+      {
+        "investment_name": "ZOETIS INC",
+        "alternative_names": ["ZTS US - ZOETIS INC", "ZTS"],
+        "ticker": "ZTS",
+        "company_country": "USA",
+        "area_of_work": "Pharmaceuticals"
+      },
+      {
+        "investment_name": "HONEYWELL INTERNATIONAL INC",
+        "alternative_names": ["HON US - HONEYWELL INTERNATIONAL INC", "HON"],
+        "ticker": "HON",
+        "company_country": "USA",
+        "area_of_work": "Industrial Manufacturing"
+      },
+      {
+        "investment_name": "F5 NETWORKS INC",
+        "alternative_names": ["FFIV US - F5 NETWORKS INC", "FFIV"],
+        "ticker": "FFIV",
+        "company_country": "USA",
+        "area_of_work": "Technology"
+      },
+      {
+        "investment_name": "HALLIBURTON CO",
+        "alternative_names": ["HAL US - HALLIBURTON CO", "HAL"],
+        "ticker": "HAL",
+        "company_country": "USA",
+        "area_of_work": "Oil and Gas"
+      },
+      {
+        "investment_name": "MOODY'S CORP",
+        "alternative_names": ["MCO US - MOODY'S CORP", "MCO"],
+        "ticker": "MCO",
+        "company_country": "USA",
+        "area_of_work": "Financial Services"
+      },
+      {
+        "investment_name": "CATERPILLAR INC",
+        "alternative_names": ["CAT US - CATERPILLAR INC", "CAT"],
+        "ticker": "CAT",
+        "company_country": "USA",
+        "area_of_work": "Heavy Machinery"
+      },
+      {
+        "investment_name": "CBOE HOLDINGS INC",
+        "alternative_names": ["CBOE US - CBOE HOLDINGS INC", "CBOE"],
+        "ticker": "CBOE",
+        "company_country": "USA",
+        "area_of_work": "Financial Services"
+      },
+      {
+        "investment_name": "ILLINOIS TOOL WORKS INC",
+        "alternative_names": ["ITW US - ILLINOIS TOOL WORKS INC", "ITW"],
+        "ticker": "ITW",
+        "company_country": "USA",
+        "area_of_work": "Industrial Manufacturing"
+      },
+      {
+        "investment_name": "JOHNSON & JOHNSON",
+        "alternative_names": ["JNJ US - JOHNSON & JOHNSON", "JNJ"],
+        "ticker": "JNJ",
+        "company_country": "USA",
+        "area_of_work": "Healthcare"
+      },
+      {
+        "investment_name": "IDEXX LABORATORIES INC",
+        "alternative_names": ["IDXX US - IDEXX LABORATORIES INC", "IDXX"],
+        "ticker": "IDXX",
+        "company_country": "USA",
+        "area_of_work": "Veterinary Diagnostics"
+      },
+      {
+        "investment_name": "TAIWAN SEMICONDUCTOR-SP ADR",
+        "alternative_names": ["TSM US - TAIWAN SEMICONDUCTOR-SP ADR", "TSM"],
+        "ticker": "TSM",
+        "company_country": "Taiwan",
+        "area_of_work": "Semiconductors"
+      },
+      {
+        "investment_name": "ISHARES MSCI BRAZIL INDEX FUND",
+        "alternative_names": ["EWZ US - ISHARES MSCI BRAZIL INDEX FUND", "EWZ"],
+        "ticker": "EWZ",
+        "company_country": "USA",
+        "area_of_work": "Exchange-Traded Fund (ETF)"
+      },
+      {
+        "investment_name": "RIO TINTO PLC",
+        "alternative_names": ["RIO US - RIO TINTO PLC", "RIO"],
+        "ticker": "RIO",
+        "company_country": "United Kingdom",
+        "area_of_work": "Mining"
+      },
+      {
+        "investment_name": "ISHARES FTSE CHINA 25 INDEX FU",
+        "alternative_names": ["FXI US - ISHARES FTSE CHINA 25 INDEX FU", "FXI"],
+        "ticker": "FXI",
+        "company_country": "USA",
+        "area_of_work": "Exchange-Traded Fund (ETF)"
+      },
+      {
+        "investment_name": "NUCOR CORP",
+        "alternative_names": ["NUE US - NUCOR CORP", "NUE"],
+        "ticker": "NUE",
+        "company_country": "USA",
+        "area_of_work": "Steel Manufacturing"
+      },
+      {
+        "investment_name": "SOUTHERN COPPER CORP",
+        "alternative_names": ["SOUTHERN COPPER CORP"],
+        "ticker": "Not Explicitly Provided",
+        "company_country": "USA",
+        "area_of_work": "Mining"
+      },
+      {
+        "investment_name": "ENERGY SELECT SECTOR SPDR",
+        "alternative_names": ["ENERGY SELECT SECTOR SPDR", "XLE"],
+        "ticker": "XLE",
+        "company_country": "USA",
+        "area_of_work": "Exchange-Traded Fund (ETF)"
+      },
+      {
+        "investment_name": "ALCOA INC",
+        "alternative_names": ["ALCOA INC"],
+        "ticker": "Not Explicitly Provided",
+        "company_country": "USA",
+        "area_of_work": "Aluminum Production"
+      },
+      {
+        "investment_name": "TYSON FOODS INC",
+        "alternative_names": ["TYSON FOODS INC"],
+        "ticker": "Not Explicitly Provided",
+        "company_country": "USA",
+        "area_of_work": "Food Production"
+      },
+      {
+        "investment_name": "PILGRIM'S PRIDE CORP",
+        "alternative_names": ["PILGRIM'S PRIDE CORP"],
+        "ticker": "Not Explicitly Provided",
+        "company_country": "USA",
+        "area_of_work": "Food Production"
+      },
+      {
+        "investment_name": "BARCLAYS PLC",
+        "alternative_names": ["BARCLAYS PLC"],
+        "ticker": "Not Explicitly Provided",
+        "company_country": "United Kingdom",
+        "area_of_work": "Banking and Financial Services"
+      },
+      {
+        "investment_name": "SHELL PLC",
+        "alternative_names": ["SHELL PLC"],
+        "ticker": "Not Explicitly Provided",
+        "company_country": "United Kingdom",
+        "area_of_work": "Oil and Gas"
+      },
+      {
+        "investment_name": "UNITED STATES OIL FUND LP",
+        "alternative_names": ["UNITED STATES OIL FUND LP"],
+        "ticker": "Not Explicitly Provided",
+        "company_country": "USA",
+        "area_of_work": "Oil Fund"
+      },
+      {
+        "investment_name": "KRANESHARES CSI CHINA INTERN",
+        "alternative_names": ["KRANESHARES CSI CHINA INTERN"],
+        "ticker": "Not Explicitly Provided",
+        "company_country": "USA",
+        "area_of_work": "Exchange-Traded Fund (ETF)"
+      },
+      {
+        "investment_name": "TECK RESOURCES LTD",
+        "alternative_names": ["TECK RESOURCES LTD"],
+        "ticker": "Not Explicitly Provided",
+        "company_country": "Canada",
+        "area_of_work": "Mining"
+      },
+      {
+        "investment_name": "ARCELORMITTAL SA REG SHS",
+        "alternative_names": ["ARCELORMITTAL SA REG SHS"],
+        "ticker": "Not Explicitly Provided",
+        "company_country": "Luxembourg",
+        "area_of_work": "Steel Manufacturing"
+      },
+      {
+        "investment_name": "CF INDUSTRIES HOLDINGS INC",
+        "alternative_names": ["CF INDUSTRIES HOLDINGS INC"],
+        "ticker": "Not Explicitly Provided",
+        "company_country": "USA",
+        "area_of_work": "Chemicals"
+      },
+      {
+        "investment_name": "ARCHER-DANIELS-MIDLAND CO",
+        "alternative_names": ["ARCHER-DANIELS-MIDLAND CO"],
+        "ticker": "Not Explicitly Provided",
+        "company_country": "USA",
+        "area_of_work": "Agriculture"
+      },
+      {
+        "investment_name": "BUNGE ALIM",
+        "alternative_names": ["BUNGE ALIM"],
+        "ticker": "Not Explicitly Provided",
+        "company_country": "USA",
+        "area_of_work": "Food and Agriculture"
+      },
+      {
+        "investment_name": "NUTRIEN LTD",
+        "alternative_names": ["NUTRIEN LTD"],
+        "ticker": "Not Explicitly Provided",
+        "company_country": "Canada",
+        "area_of_work": "Agriculture"
+      },
+      {
+        "investment_name": "XTRACKERS HARVEST CSI 300 CH",
+        "alternative_names": ["ASHR US - XTRACKERS HARVEST CSI 300 CH", "ASHR"],
+        "ticker": "ASHR",
+        "company_country": "USA",
+        "area_of_work": "Exchange-Traded Fund (ETF)"
+      },
+      {
+        "investment_name": "INDETERMINADO",
+        "alternative_names": ["INDETERMINADO"],
+        "ticker": "Indeterminado",
+        "company_country": "Brazil",
+        "area_of_work": "Indeterminado"
+      },
+      {
+        "investment_name": "SWAP",
+        "alternative_names": ["SWAP", "SWP"],
+        "ticker": "Swap",
+        "company_country": "Brazil",
+        "area_of_work": "Swap"
       }
     ]
   }
