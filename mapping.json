@@ -76,7 +76,7 @@
       },
       {
         "investment_name": "MASTERCARD INC",
-        "alternative_names": ["Mastercard", "MA", "MA34", "MA32", "MA33", "MSCD34", "MSCD33", "MSCD32"],
+        "alternative_names": ["Mastercard", "MA34", "MA32", "MA33", "MSCD34", "MSCD33", "MSCD32"],
         "ticker": "MA",
         "company_country": "USA",
         "area_of_work": "Financial Services"
@@ -620,7 +620,7 @@
         "investment_name": "Ternium Sa Bdr",
         "alternative_names": ["Ternium Sa Bdr", "TXSA34", "TXSA33", "TXSA32"],
         "ticker": "TXSA",
-        "company_country": "Argentina",
+        "company_country": "Luxembourg",
         "area_of_work": "Steel Manufacturing"
       },
       {
@@ -634,7 +634,7 @@
         "investment_name": "TENARIS",
         "alternative_names": ["TENARIS", "T1SS34", "T1SS33", "T1SS32", "T1SS"],
         "ticker": "T1SS",
-        "company_country": "Brazil",
+        "company_country": "Luxembourg",
         "area_of_work": "Banking and Financial Services"
       },
       {
