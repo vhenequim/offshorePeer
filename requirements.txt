@@ -3,4 +3,5 @@ pandas
 plotly
 polars
 datetime
-
+fastexcel
+openpyxl
