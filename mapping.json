@@ -243,7 +243,7 @@
       },
       {
         "investment_name": "AMAZON.COM INC",
-        "alternative_names": ["Amazon", "AMZN", "AMZO"], 
+        "alternative_names": ["Amazon", "AMZN", "AMZO", "AMAZON"], 
         "ticker": "AMZN",
         "company_country": "USA",
         "area_of_work": "E-commerce and Cloud Computing"
@@ -307,7 +307,7 @@
       },
       {
         "investment_name": "NU BANK",
-        "alternative_names": ["NU ", "NUBR", "ROXO"],
+        "alternative_names": [" NU ", "NUBR", "ROXO"],
         "ticker": "NU",
         "company_country": "Brazil",
         "area_of_work": "Digital Banking"
@@ -370,16 +370,10 @@
       },
       {
         "investment_name": "XP US - XP INC - CLASS A - 24884 VENC.: 31/12/2049",
-        "alternative_names": ["XP", "XP INC"],
+        "alternative_names": ["XPBR", "XP INC", "XP"],
         "ticker": "XPBR",
         "company_country": "Brazil",
         "area_of_work": "Financial Services"
-      },
-      {
-        "investment_name": "COMPANHIA VALE DO RIO DOCE",
-        "ticker": "VALE",
-        "company_country": "Brazil",
-        "area_of_work": "Mining and Metals"
       },
       {
         "investment_name": "XLE US - ENERGY SELECT SECTOR SPDR - 6000 VENC.: 31/12/2049",
@@ -499,14 +493,14 @@
       },
       {
         "investment_name": " CINT US - CI&T INC/UNITED STATES",
-        "alternative_names": ["CINT"],
+        "alternative_names": ["CINT US", "CI&T"],
         "ticker": "CINT",
         "company_country": "USA",
         "area_of_work": "IT Services"
       },
       {
         "investment_name": "VIST US - VISTA OIL & GAS",
-        "alternative_names": ["VIST"],
+        "alternative_names": ["VIST US", "VISTA OIL"],
         "ticker": "VIST",
         "company_country": "Mexico",
         "area_of_work": "Oil and Gas"
@@ -667,21 +661,21 @@
       },
       {
         "investment_name": "Alibaba Group Holding Ltd",
-        "alternative_names": ["Alibaba Group Holding Ltd", "BABA", "BABA34", "BABA33", "BABA32"],
+        "alternative_names": ["Alibaba Group Holding Ltd", "ALIBABA", "BABA34", "BABA33", "BABA32"],
         "ticker": "BABA",
         "company_country": "China",
         "area_of_work": "E-commerce and Technology"
       },
       {
         "investment_name": "ANHEUSER BUSCH INBEV",
-        "alternative_names": ["ANHEUSER BUSCH INBEV", "ABI", "ABUD34", "ABUD33", "ABUD32"],
+        "alternative_names": ["ANHEUSER BUSCH INBEV", "ABUD34", "ABUD33", "ABUD32"],
         "ticker": "ABUD",
         "company_country": "Belgium",
         "area_of_work": "Food and Beverage"
       },
       {
         "investment_name": "GERDAU",
-        "alternative_names": ["GERDAU", "GGBR", "GGBR34", "GGBR33", "GGBR32"],
+        "alternative_names": ["GERDAU", "GGBR34", "GGBR33", "GGBR32"],
         "ticker": "GGBR",
         "company_country": "Brazil",
         "area_of_work": "Steel Manufacturing"
@@ -751,7 +745,7 @@
       },
       {
         "investment_name": "TEMPUR-PEDIC INTERNATIONAL INC",
-        "alternative_names": ["TEMPUR-PEDIC", "SOMNIGROUP", "SGI"],
+        "alternative_names": ["TEMPUR-PEDIC", "SOMNIGROUP"],
         "ticker": "SGI",
         "company_country": "USA",
         "area_of_work": "Investment Fund"
@@ -765,21 +759,14 @@
       },
       {
         "investment_name": "ROST US - ROSS STORES INC",
-        "alternative_names": ["ROST US - ROSS STORES INC", "ROST", "ROST34", "ROST33", "ROST32"],
-        "ticker": "ROST",
-        "company_country": "USA",
-        "area_of_work": "Retail"
-      },
-      {
-        "investment_name": "ROST US - ROSS STORES INC",
-        "alternative_names": ["ROST US - ROSS STORES INC", "ROST", "ROST34", "ROST33", "ROST32"],
+        "alternative_names": ["ROST US - ROSS STORES INC", "ROST STORES", "ROST34", "ROST33", "ROST32"],
         "ticker": "ROST",
         "company_country": "USA",
         "area_of_work": "Retail"
       },
       {
         "investment_name": "ELECTRONIC ARTS INC",
-        "alternative_names": ["EA US - ELECTRONIC ARTS INC", "EA"],
+        "alternative_names": ["EA US - ELECTRONIC ARTS INC", "EA US"],
         "ticker": "EA",
         "company_country": "USA",
         "area_of_work": "Gaming and Entertainment"
@@ -793,35 +780,35 @@
       },
       {
         "investment_name": "TRANE TECHNOLOGIES PLC",
-        "alternative_names": ["TT US - TRANE TECHNOLOGIES PLC", "TT"],
+        "alternative_names": ["TT US - TRANE TECHNOLOGIES PLC", "TRANE TECH"],
         "ticker": "TT",
         "company_country": "Ireland",
         "area_of_work": "Industrial Manufacturing"
       },
       {
         "investment_name": "COCA-COLA CO/THE",
-        "alternative_names": ["KO US - COCA-COLA CO/THE", "KO"],
+        "alternative_names": ["KO US - COCA-COLA CO/THE", "COCA-COLA"],
         "ticker": "KO",
         "company_country": "USA",
         "area_of_work": "Beverages"
       },
       {
         "investment_name": "MOTOROLA SOLUTIONS INC",
-        "alternative_names": ["MSI US - MOTOROLA SOLUTIONS INC", "MSI"],
+        "alternative_names": ["MSI US - MOTOROLA SOLUTIONS INC", "MOTOROLA"],
         "ticker": "MSI",
         "company_country": "USA",
         "area_of_work": "Telecommunications"
       },
       {
         "investment_name": "COSTCO WHOLESALE CORP",
-        "alternative_names": ["COST US - COSTCO WHOLESALE CORP", "COST"],
+        "alternative_names": ["COST US - COSTCO WHOLESALE CORP", "COSTCO"],
         "ticker": "COST",
         "company_country": "USA",
         "area_of_work": "Retail"
       },
       {
         "investment_name": "PROCTER & GAMBLE COMPANY",
-        "alternative_names": ["PG US - PROCTER & GAMBLE COMPANY", "PG"],
+        "alternative_names": ["PG US - PROCTER & GAMBLE COMPANY", "PROCTER & GAMBLE"],
         "ticker": "PG",
         "company_country": "USA",
         "area_of_work": "Consumer Goods"
@@ -835,35 +822,35 @@
       },
       {
         "investment_name": "HONEYWELL INTERNATIONAL INC",
-        "alternative_names": ["HON US - HONEYWELL INTERNATIONAL INC", "HON"],
+        "alternative_names": ["HON US - HONEYWELL INTERNATIONAL INC", "HONEYWELL"],
         "ticker": "HON",
         "company_country": "USA",
         "area_of_work": "Industrial Manufacturing"
       },
       {
         "investment_name": "F5 NETWORKS INC",
-        "alternative_names": ["FFIV US - F5 NETWORKS INC", "FFIV"],
+        "alternative_names": ["FFIV US - F5 NETWORKS INC", "F5 NETWORKS"],
         "ticker": "FFIV",
         "company_country": "USA",
         "area_of_work": "Technology"
       },
       {
         "investment_name": "HALLIBURTON CO",
-        "alternative_names": ["HAL US - HALLIBURTON CO", "HAL"],
+        "alternative_names": ["HAL US - HALLIBURTON CO", "HALLIBURTON"],
         "ticker": "HAL",
         "company_country": "USA",
         "area_of_work": "Oil and Gas"
       },
       {
         "investment_name": "MOODY'S CORP",
-        "alternative_names": ["MCO US - MOODY'S CORP", "MCO"],
+        "alternative_names": ["MCO US - MOODY'S CORP", "MOODY"],
         "ticker": "MCO",
         "company_country": "USA",
         "area_of_work": "Financial Services"
       },
       {
         "investment_name": "CATERPILLAR INC",
-        "alternative_names": ["CAT US - CATERPILLAR INC", "CAT"],
+        "alternative_names": ["CAT US - CATERPILLAR INC", "CATERPILLAR"],
         "ticker": "CAT",
         "company_country": "USA",
         "area_of_work": "Heavy Machinery"
@@ -877,28 +864,28 @@
       },
       {
         "investment_name": "ILLINOIS TOOL WORKS INC",
-        "alternative_names": ["ITW US - ILLINOIS TOOL WORKS INC", "ITW"],
+        "alternative_names": ["ITW US - ILLINOIS TOOL WORKS INC", "ILLINOIS TOOL WORKS"],
         "ticker": "ITW",
         "company_country": "USA",
         "area_of_work": "Industrial Manufacturing"
       },
       {
         "investment_name": "JOHNSON & JOHNSON",
-        "alternative_names": ["JNJ US - JOHNSON & JOHNSON", "JNJ"],
+        "alternative_names": ["JNJ US - JOHNSON & JOHNSON", "JOHNSON & JOHNSON"],
         "ticker": "JNJ",
         "company_country": "USA",
         "area_of_work": "Healthcare"
       },
       {
         "investment_name": "IDEXX LABORATORIES INC",
-        "alternative_names": ["IDXX US - IDEXX LABORATORIES INC", "IDXX"],
+        "alternative_names": ["IDXX US - IDEXX LABORATORIES INC", "IDEXX"],
         "ticker": "IDXX",
         "company_country": "USA",
         "area_of_work": "Veterinary Diagnostics"
       },
       {
         "investment_name": "TAIWAN SEMICONDUCTOR-SP ADR",
-        "alternative_names": ["TSM US - TAIWAN SEMICONDUCTOR-SP ADR", "TSM"],
+        "alternative_names": ["TSM US - TAIWAN SEMICONDUCTOR-SP ADR", "TAIWAN SEMICONDUCTOR"],
         "ticker": "TSM",
         "company_country": "Taiwan",
         "area_of_work": "Semiconductors"
@@ -912,7 +899,7 @@
       },
       {
         "investment_name": "RIO TINTO PLC",
-        "alternative_names": ["RIO US - RIO TINTO PLC", "RIO"],
+        "alternative_names": ["RIO US - RIO TINTO PLC", "RIO TINTO"],
         "ticker": "RIO",
         "company_country": "United Kingdom",
         "area_of_work": "Mining"
@@ -926,7 +913,7 @@
       },
       {
         "investment_name": "NUCOR CORP",
-        "alternative_names": ["NUE US - NUCOR CORP", "NUE"],
+        "alternative_names": ["NUE US - NUCOR CORP", "NUCOR"],
         "ticker": "NUE",
         "company_country": "USA",
         "area_of_work": "Steel Manufacturing"
@@ -1056,6 +1043,48 @@
         "ticker": "Swap",
         "company_country": "Brazil",
         "area_of_work": "Swap"
+      },
+      {
+        "investment_name": "MARKET VECTORS GOLD MINERS ETF",
+        "alternative_names": ["MARKET VECTORS GOLD MINERS"],
+        "ticker": "GDX",
+        "company_country": "USA",
+        "area_of_work": "Investment Fund"
+      },
+      {
+        "investment_name": "CINTAS CORP",
+        "alternative_names": ["CINTAS CORP"],
+        "ticker": "C1TA",
+        "company_country": "USA",
+        "area_of_work": "Industrial Manufacturing"
+      },
+      {
+        "investment_name": "XOP US - SPDR S&P OIL & GAS EXPLORATION & PRODUCT",
+        "alternative_names": ["XOP US - SPDR S&P OIL & GAS EXPLORATION & PRODUCT", "XOP"],
+        "ticker": "XOP",
+        "company_country": "USA",
+        "area_of_work": "Oil and Gas"
+      },
+      {
+        "investment_name": "COMPANHIA VALE DO RIO DOCE",
+        "alternative_names": ["COMPANHIA VALE DO RIO DOCE"],
+        "ticker": "VALE",
+        "company_country": "Brazil",
+        "area_of_work": "Mining"
+      },
+      {
+        "investment_name": "IP PART INTL CL",
+        "alternative_names": ["IP PART INTL CL"],
+        "ticker": "Fundo",
+        "company_country": "International",
+        "area_of_work": "Investment Fund"
+      },
+      {
+        "investment_name": "LONG-ONLY CLASS SHARES",
+        "alternative_names": ["LONG-ONLY CLASS SHARES"],
+        "ticker": "Fundo",
+        "company_country": "International",
+        "area_of_work": "Investment Fund"
       }
     ]
   }
