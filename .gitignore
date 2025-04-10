@@ -8,3 +8,6 @@ list.txt
 mapping_new.json
 base_peers_old_mapped.xlsx
 __pycache__/graph_maker.cpython-312.pyc
+base_mapper.ipynb
+graph_maker.ipynb
+*.ipynb

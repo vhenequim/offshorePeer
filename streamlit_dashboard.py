@@ -1,6 +1,6 @@
 import streamlit as st
 import streamlit.components.v1 as components
-from graph_maker import graph_per_fund, graph_per_ticker
+from graph_maker import graph_per_fund, graph_per_ticker, analyze_performance_vs_investment_percentage
 import polars as pl
 
 # Set up the page
@@ -15,7 +15,7 @@ def load_data():
     # For example: df = pl.read_csv("your_data.csv")
     # This is a placeholder
     try:
-        df = pl.read_excel("base_peers_mapped.xlsx")
+        df = pl.read_excel("base_peers_mapped.xlsx").filter(pl.col("funds") != "OCEANA")
         return df
     except Exception as e:
         st.error(f"Error loading data: {e}")
@@ -60,7 +60,7 @@ selected_fund = st.selectbox("Select a Fund", filtered_funds)
 
 # Your existing code remains unchanged, using the same absolute paths as before
 st.markdown("---")
-st.subheader("Funds Overview w/o S.A. Companies")
+st.subheader("Funds Overview w S.A. Companies")
 # Create three columns for the graphs
 col1, col2, col3 = st.columns(3)
 
@@ -89,25 +89,182 @@ with col3:
     else:
         st.info("No combined data available for this fund")
 
+        st.markdown("---")  # This adds a horizontal line
+
+st.subheader("Funds Overview w/o S.A. Companies")
+col4, col5, col6 = st.columns(3)
+# Display HTML graphs in each column
+with col4:
+    st.subheader("BDR Distribution")
+    fig_bdr = graph_per_fund(df, selected_fund, investment_type="BDR", exclude_south_america=True)
+    if fig_bdr is not None:
+        st.plotly_chart(fig_bdr, use_container_width=True)
+    else:
+        st.info("No BDR data available for this fund")
+
+with col5:
+    st.subheader("Investment Exterior Distribution")
+    fig_ext = graph_per_fund(df, selected_fund, investment_type="Invest. Ext.", exclude_south_america=True)
+    if fig_ext is not None:
+        st.plotly_chart(fig_ext, use_container_width=True)
+    else:
+        st.info("No Investment Exterior data available for this fund")
+
+with col6:
+    st.subheader("Combined Distribution")
+    fig_combined = graph_per_fund(df, selected_fund, exclude_south_america=True)
+    if fig_combined is not None:
+        st.plotly_chart(fig_combined, use_container_width=True)
+    else:
+        st.info("No combined data available for this fund")
+
+
+
 st.markdown("---")  # This adds a horizontal line
 
 # For now, we'll skip the South America section as mentioned by the user
 # The offshore ratio sections would be replaced similarly with dynamic charts
-st.subheader("Offshore Ratio")
+st.subheader("Offshore Ratio w/ S.A. Companies")
 fig_offshore = graph_per_ticker(df, None)  # This will need proper parameters
 if fig_offshore is not None:
     st.plotly_chart(fig_offshore, use_container_width=True)
 else:
     st.info("No offshore ratio data available")
 
+st.markdown("---")  # This adds a horizontal line
+
+# For now, we'll skip the South America section as mentioned by the user
+# The offshore ratio sections would be replaced similarly with dynamic charts
+st.subheader("Offshore Ratio w/o S.A. Companies")
+fig_offshore = graph_per_ticker(df, None, exclude_south_america=True)  # This will need proper parameters
+if fig_offshore is not None:
+    st.plotly_chart(fig_offshore, use_container_width=True)
+else:
+    st.info("No offshore ratio data available")
+
+st.markdown("---")  # This adds a horizontal line
+
+# Performance vs. Investment Percentage Analysis Section
+st.subheader("Performance vs. Investment Percentage Analysis")
+
+# Row 1: Combined (Invest. Ext. + BDR)
+row1_col1, row1_col2 = st.columns(2)
+with row1_col1:
+    st.subheader("Combined w/ S.A.")
+    fig_combined_sa = analyze_performance_vs_investment_percentage(df, investment_type=None, exclude_south_america=False)
+    if fig_combined_sa is not None:
+        st.plotly_chart(fig_combined_sa, use_container_width=True)
+    else:
+        st.info("No combined data available (w/ S.A.)")
+
+with row1_col2:
+    st.subheader("Combined w/o S.A.")
+    fig_combined_no_sa = analyze_performance_vs_investment_percentage(df, investment_type=None, exclude_south_america=True)
+    if fig_combined_no_sa is not None:
+        st.plotly_chart(fig_combined_no_sa, use_container_width=True)
+    else:
+        st.info("No combined data available (w/o S.A.)")
+
+st.markdown("---") # Separator between rows
+
+# Row 2: Investment Exterior
+
+row2_col1, row2_col2 = st.columns(2)
+with row2_col1:
+    st.subheader("Invest. Ext. w/ S.A.")
+    fig_ext_sa = analyze_performance_vs_investment_percentage(df, investment_type="Invest. Ext.", exclude_south_america=False)
+    if fig_ext_sa is not None:
+        st.plotly_chart(fig_ext_sa, use_container_width=True)
+    else:
+        st.info("No Invest. Ext. data available (w/ S.A.)")
+
+with row2_col2:
+    st.subheader("Invest. Ext. w/o S.A.")
+    fig_ext_no_sa = analyze_performance_vs_investment_percentage(df, investment_type="Invest. Ext.", exclude_south_america=True)
+    if fig_ext_no_sa is not None:
+        st.plotly_chart(fig_ext_no_sa, use_container_width=True)
+    else:
+        st.info("No Invest. Ext. data available (w/o S.A.)")
+
+st.markdown("---") # Separator between rows
+
+# Row 3: BDR
+row3_col1, row3_col2 = st.columns(2)
+with row3_col1:
+    st.subheader("BDR w/ S.A.")
+    fig_bdr_sa = analyze_performance_vs_investment_percentage(df, investment_type="BDR", exclude_south_america=False)
+    if fig_bdr_sa is not None:
+        st.plotly_chart(fig_bdr_sa, use_container_width=True)
+    else:
+        st.info("No BDR data available (w/ S.A.)")
+
+with row3_col2:
+    st.subheader("BDR w/o S.A.")
+    fig_bdr_no_sa = analyze_performance_vs_investment_percentage(df, investment_type="BDR", exclude_south_america=True)
+    if fig_bdr_no_sa is not None:
+        st.plotly_chart(fig_bdr_no_sa, use_container_width=True)
+    else:
+        st.info("No BDR data available (w/o S.A.)")
 
 
+st.markdown("---")  # This adds a horizontal line
 
+# ... existing code ...
+
+# Performance vs. Investment Percentage Analysis Section
+st.subheader("Performance vs. Investment Percentage Analysis - Top 10 & Bottom 10 Funds")
+
+# Row 1: Combined (Invest. Ext. + BDR)
+row1_col1, row1_col2 = st.columns(2)
+with row1_col1:
+    st.subheader("Combined w/ S.A.")
+    fig_combined_sa = analyze_performance_vs_investment_percentage(df, investment_type=None, exclude_south_america=False, num_extremes=10)
+    if fig_combined_sa is not None:
+        st.plotly_chart(fig_combined_sa, use_container_width=True)
+    else:
+        st.info("No combined data available (w/ S.A.)")
+
+with row1_col2:
+    st.subheader("Combined w/o S.A.")
+    fig_combined_no_sa = analyze_performance_vs_investment_percentage(df, investment_type=None, exclude_south_america=True, num_extremes=10)
+    if fig_combined_no_sa is not None:
+        st.plotly_chart(fig_combined_no_sa, use_container_width=True)
+    else:
+        st.info("No combined data available (w/o S.A.)")
+
+
+st.markdown("---")  # This adds a horizontal line
+
+# ... existing code ...
+
+# Performance vs. Investment Percentage Analysis Section
+st.subheader("Performance vs. Investment Percentage Analysis - Top 5 & Bottom 5 Funds")
+
+# Row 1: Combined (Invest. Ext. + BDR)
+row1_col1, row1_col2 = st.columns(2)
+with row1_col1:
+    st.subheader("Combined w/ S.A.")
+    fig_combined_sa = analyze_performance_vs_investment_percentage(df, investment_type=None, exclude_south_america=False, num_extremes=5)
+    if fig_combined_sa is not None:
+        st.plotly_chart(fig_combined_sa, use_container_width=True)
+    else:
+        st.info("No combined data available (w/ S.A.)")
+
+with row1_col2:
+    st.subheader("Combined w/o S.A.")
+    fig_combined_no_sa = analyze_performance_vs_investment_percentage(df, investment_type=None, exclude_south_america=True, num_extremes=5)
+    if fig_combined_no_sa is not None:
+        st.plotly_chart(fig_combined_no_sa, use_container_width=True)
+    else:
+        st.info("No combined data available (w/o S.A.)")
 
 
 
 st.markdown("---")  # This adds a horizontal line
 
+# ... existing code ...
+
+# ... existing code ...
 
 # st.subheader("Offshore Ratio w/ S.A. Companies")
 # html_content = read_html_file(f"{GRAPHS_DIR}/offshore_ratio_plot_brazil.html")
