@@ -662,32 +662,208 @@ def analyze_performance_vs_investment_percentage(
 
     return fig
 
-# --- Example Usage ---
 
-# Analyze for BDR & Invest. Ext. combined, excluding South America, Top 10 & Bottom 10 Funds
-# fig_extremes = analyze_performance_vs_investment_percentage(
-#     df_peers,
-#     exclude_south_america=True,
-#     num_extremes=10
-# )
-# if fig_extremes: fig_extremes.show()
 
-# # Analyze for BDR only, including South America, Top 5 & Bottom 5 Funds
-# fig_extremes_bdr = analyze_performance_vs_investment_percentage(
-#     df_peers.filter(pl.col("funds") != "OCEANA"),
-#     investment_type="BDR",
-#     num_extremes=5
-# )
-# if fig_extremes_bdr: fig_extremes_bdr.show()
+def plot_average_performance_vs_allocation_corrected(
+    df,
+    investment_type=None,
+    exclude_south_america=False,
+    remove_zero_alloc_when_filtered=True, # Flag controls if zero filtering happens *at all*
+    num_extremes=None # Add parameter for top/bottom N funds based on overall rentability
+):
+    """
+    Creates a scatter plot showing the relationship between OVERALL average
+    monthly rentability and FILTERED average monthly allocation percentage
+    for each fund. Includes an OLS trendline and the correlation coefficient (R).
+    Optionally removes funds with 0% filtered allocation ONLY WHEN exclude_south_america=True.
+    Optionally focuses on the top and bottom N funds based on overall rentability.
 
-# Analyze for BDR & Invest. Ext. combined, excluding South America, Top 10 Funds (using the other parameter)
-# fig_top10 = analyze_performance_vs_investment_percentage(
-#     df_peers,
-#     exclude_south_america=True,
-#     top_n_funds=10
-# )
-# if fig_top10: fig_top10.show()
+    Parameters:
+    -----------
+    df : polars.DataFrame
+        The dataframe containing the investment data.
+    investment_type : str or None, default=None
+        Filter for specific investment type applied ONLY to allocation calculation.
+    exclude_south_america : bool, default=False
+        If True, excludes S.A. assets when calculating avg allocation ONLY.
+    remove_zero_alloc_when_filtered : bool, default=True
+        If True AND exclude_south_america is True, funds with a calculated
+        average allocation of 0% (after filtering S.A.) will be removed
+        from the plot and correlation calculation. Has no effect if
+        exclude_south_america is False.
+    num_extremes : int or None, default=None
+        If an integer is provided, analyze only the top N and bottom N funds
+        based on their OVERALL average rentability. If None, analyze all eligible funds.
 
-# Analyze all funds (default)
-# fig_all = analyze_performance_vs_investment_percentage(df_peers)
-# if fig_all: fig_all.show()
+    Returns:
+    --------
+    plotly.graph_objects.Figure or None
+        A Plotly scatter plot figure with trendline, or None if data is insufficient.
+    """
+
+    monthly_fund_rentability = df.group_by(["funds", "month"]).agg(
+        pl.first("rentability").cast(pl.Float64).alias("monthly_rentability")
+    )
+    overall_fund_rentability_all = monthly_fund_rentability.group_by("funds").agg(
+        (pl.mean("monthly_rentability") * 100).alias("avg_overall_rentability")
+    ).drop_nulls()
+
+    if overall_fund_rentability_all.is_empty():
+        print("Error: Could not calculate overall average rentability.")
+        return None
+
+    fund_selection_title_part = "(All Funds)" # Default title part
+    overall_fund_rentability = overall_fund_rentability_all # Start with all funds
+
+    if num_extremes is not None and isinstance(num_extremes, int) and num_extremes > 0:
+        if overall_fund_rentability_all.height >= 2 * num_extremes:
+            fund_rentability_sorted = overall_fund_rentability_all.sort("avg_overall_rentability")
+            top_funds = fund_rentability_sorted.tail(num_extremes) # Highest rentability
+            bottom_funds = fund_rentability_sorted.head(num_extremes) # Lowest rentability
+            overall_fund_rentability = pl.concat([top_funds, bottom_funds]) # Keep only extremes
+            fund_selection_title_part = f"(Top & Bottom {num_extremes} Funds by Rentability)"
+            print(f"Info: Selecting Top & Bottom {num_extremes} funds based on overall rentability.")
+        else:
+            print(f"Warning: Not enough funds ({overall_fund_rentability_all.height}) to select top and bottom {num_extremes}. Analyzing all available funds.")
+            # Keep overall_fund_rentability as overall_fund_rentability_all
+
+    filtered_df_alloc = df.clone()
+    title_parts = []
+    type_label = "BDR & Invest. Ext."
+    sa_filter_active = False # Flag to track if SA filter was applied
+
+    if investment_type == "BDR":
+        filtered_df_alloc = filtered_df_alloc.filter(pl.col("investment_type") == "BDR")
+        type_label = "BDR"
+        title_parts.append("BDR")
+    elif investment_type == "Invest. Ext.":
+        filtered_df_alloc = filtered_df_alloc.filter(pl.col("investment_type") == "Invest. Ext.")
+        type_label = "Invest. Ext."
+        title_parts.append("Invest. Ext.")
+    else: # Combined
+        filtered_df_alloc = filtered_df_alloc.filter(
+            (pl.col("investment_type") == "BDR") | (pl.col("investment_type") == "Invest. Ext.")
+        )
+        title_parts.append(f"{type_label}")
+
+    if exclude_south_america:
+        sa_filter_active = True # Set flag because SA filter is being applied
+        south_american_countries = [
+            "Argentina", "Bolivia", "Brazil", "Chile", "Colombia",
+            "Ecuador", "Guyana", "Paraguay", "Peru", "Suriname",
+            "Uruguay", "Venezuela"
+        ]
+        filtered_df_alloc = filtered_df_alloc.with_columns(pl.col("company_country").cast(pl.Utf8))
+        filtered_df_alloc = filtered_df_alloc.filter(
+            ~pl.col("company_country").is_in(south_american_countries)
+        )
+        title_parts.append("Excl. S.A.")
+    else:
+        # sa_filter_active remains False
+        title_parts.append("Incl. S.A.")
+
+    # Combine allocation filter info with fund selection info
+    base_title = f"Avg Performance vs. Avg Allocation ({' / '.join(title_parts)}) - {fund_selection_title_part}"
+    alloc_col_name = f"avg_filtered_allocation_perc"
+
+    # Filter the allocation calculation to only include funds selected in step 1.5
+    selected_funds = overall_fund_rentability.select("funds")
+    filtered_df_alloc = filtered_df_alloc.join(selected_funds, on="funds", how="inner")
+
+    if filtered_df_alloc.is_empty():
+         # If no allocation data remains after filtering, create a frame with 0 allocation
+         overall_fund_allocation = overall_fund_rentability.select("funds").with_columns(
+             pl.lit(0.0, dtype=pl.Float64).alias(alloc_col_name)
+         )
+    else:
+        monthly_fund_alloc_agg = filtered_df_alloc.group_by(["funds", "month"]).agg(
+            pl.sum("percentage").alias("total_monthly_percentage")
+        )
+        overall_fund_allocation = monthly_fund_alloc_agg.group_by("funds").agg(
+            (pl.mean("total_monthly_percentage") * 100).alias(alloc_col_name)
+        ).drop_nulls()
+
+    fund_averages_joined = overall_fund_rentability.join(
+        overall_fund_allocation,
+        on="funds",
+        how="left"
+    ).with_columns(
+        pl.col(alloc_col_name).fill_null(0.0) # Fill nulls for funds with no allocation data after filters
+    )
+
+    funds_before_zero_filter = fund_averages_joined.height
+    # This condition ensures zero-filtering only happens when exclude_south_america=True
+    # AND the user hasn't disabled it with remove_zero_alloc_when_filtered=False
+    if sa_filter_active and remove_zero_alloc_when_filtered:
+        zero_threshold = 1e-9
+        fund_averages_final = fund_averages_joined.filter(
+            pl.col(alloc_col_name) > zero_threshold
+        )
+        funds_after_zero_filter = fund_averages_final.height
+        if funds_after_zero_filter < funds_before_zero_filter:
+            zero_filter_applied = True
+            print(f"Info: Removed {funds_before_zero_filter - funds_after_zero_filter} funds with ~0% allocation after S.A. filter.")
+            # Update title only if the zero filter was actually applied and removed funds
+            
+    else:
+        # If exclude_south_america is False, or if zero filtering is disabled,
+        # use the data without the zero-allocation filter.
+        fund_averages_final = fund_averages_joined
+
+    if fund_averages_final.is_empty() or fund_averages_final.height < 2:
+        print(f"Not enough valid data points ({fund_averages_final.height}) after final filtering for '{base_title}'. Cannot generate plot or correlation.")
+        return None
+
+    correlation = None
+    plot_title = base_title # Use the potentially updated base_title
+    alloc_std_dev = fund_averages_final[alloc_col_name].std()
+    rent_std_dev = fund_averages_final["avg_overall_rentability"].std()
+
+    if alloc_std_dev is not None and rent_std_dev is not None and alloc_std_dev > 1e-9 and rent_std_dev > 1e-9:
+         try:
+             correlation = fund_averages_final.select(
+                 pl.corr("avg_overall_rentability", alloc_col_name)
+             ).item()
+             plot_title += f"<br>Correlation = {correlation:.3f}"
+         except Exception as e:
+             print(f"Warning: Could not calculate correlation: {e}")
+             plot_title += f"<br>(Correlation calculation failed)"
+    else:
+        print("Warning: Insufficient variance in data to calculate correlation.")
+        plot_title += f"<br>(Insufficient variance for correlation)"
+
+
+    print(f"\n--- Generating Scatter Plot: {base_title} ---")
+    print(f"Number of funds plotted: {fund_averages_final.height}")
+    if correlation is not None:
+        print(f"Correlation (R): {correlation:.4f}")
+
+    fig = px.scatter(
+        fund_averages_final.to_pandas(),
+        x=alloc_col_name,
+        y="avg_overall_rentability",
+        title=plot_title,
+        labels={
+            alloc_col_name: f"Average Monthly Allocation ({type_label}) (%)",
+            "avg_overall_rentability": "Overall Average Monthly Rentability (%)"
+        },
+        hover_name="funds",
+        template="plotly_white",
+        trendline="ols",
+        trendline_color_override="red"
+    )
+
+    fig.update_traces(
+        marker=dict(size=8, opacity=0.7),
+        selector=dict(mode='markers')
+    )
+
+    fig.update_layout(
+        height=800,
+        xaxis_title=f"Average Monthly Allocation ({type_label}) (%)",
+        yaxis_title="Overall Average Monthly Rentability (%)",
+        # title_font_size=14 # Removed this line
+    )
+
+    return fig
+
