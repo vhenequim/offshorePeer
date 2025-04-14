@@ -1,6 +1,6 @@
 import streamlit as st
 import streamlit.components.v1 as components
-from graph_maker import graph_per_fund, graph_per_ticker, analyze_performance_vs_investment_percentage
+from graph_maker import graph_per_fund, graph_per_ticker, analyze_performance_vs_investment_percentage, plot_average_performance_vs_allocation_corrected
 import polars as pl
 
 # Set up the page
@@ -151,7 +151,7 @@ st.subheader("Performance vs. Investment Percentage Analysis")
 row1_col1, row1_col2 = st.columns(2)
 with row1_col1:
     st.subheader("Combined w/ S.A.")
-    fig_combined_sa = analyze_performance_vs_investment_percentage(df, investment_type=None, exclude_south_america=False)
+    fig_combined_sa = plot_average_performance_vs_allocation_corrected(df, investment_type=None, exclude_south_america=False)
     if fig_combined_sa is not None:
         st.plotly_chart(fig_combined_sa, use_container_width=True)
     else:
@@ -159,7 +159,7 @@ with row1_col1:
 
 with row1_col2:
     st.subheader("Combined w/o S.A.")
-    fig_combined_no_sa = analyze_performance_vs_investment_percentage(df, investment_type=None, exclude_south_america=True)
+    fig_combined_no_sa = plot_average_performance_vs_allocation_corrected(df, investment_type=None, exclude_south_america=True)
     if fig_combined_no_sa is not None:
         st.plotly_chart(fig_combined_no_sa, use_container_width=True)
     else:
@@ -172,7 +172,7 @@ st.markdown("---") # Separator between rows
 row2_col1, row2_col2 = st.columns(2)
 with row2_col1:
     st.subheader("Invest. Ext. w/ S.A.")
-    fig_ext_sa = analyze_performance_vs_investment_percentage(df, investment_type="Invest. Ext.", exclude_south_america=False)
+    fig_ext_sa = plot_average_performance_vs_allocation_corrected(df.filter(~pl.col("funds").is_in(["ARX INCOME", "INDIE", "AZ QUEST", "ABSOLUTE ENDURANCE", "ENCORE", "BAHIA", "TARUÁ"])), investment_type="Invest. Ext.", exclude_south_america=False)
     if fig_ext_sa is not None:
         st.plotly_chart(fig_ext_sa, use_container_width=True)
     else:
@@ -180,7 +180,7 @@ with row2_col1:
 
 with row2_col2:
     st.subheader("Invest. Ext. w/o S.A.")
-    fig_ext_no_sa = analyze_performance_vs_investment_percentage(df, investment_type="Invest. Ext.", exclude_south_america=True)
+    fig_ext_no_sa = plot_average_performance_vs_allocation_corrected(df, investment_type="Invest. Ext.", exclude_south_america=True)
     if fig_ext_no_sa is not None:
         st.plotly_chart(fig_ext_no_sa, use_container_width=True)
     else:
@@ -192,7 +192,7 @@ st.markdown("---") # Separator between rows
 row3_col1, row3_col2 = st.columns(2)
 with row3_col1:
     st.subheader("BDR w/ S.A.")
-    fig_bdr_sa = analyze_performance_vs_investment_percentage(df, investment_type="BDR", exclude_south_america=False)
+    fig_bdr_sa = plot_average_performance_vs_allocation_corrected(df, investment_type="BDR", exclude_south_america=False)
     if fig_bdr_sa is not None:
         st.plotly_chart(fig_bdr_sa, use_container_width=True)
     else:
@@ -200,7 +200,7 @@ with row3_col1:
 
 with row3_col2:
     st.subheader("BDR w/o S.A.")
-    fig_bdr_no_sa = analyze_performance_vs_investment_percentage(df, investment_type="BDR", exclude_south_america=True)
+    fig_bdr_no_sa = plot_average_performance_vs_allocation_corrected(df, investment_type="BDR", exclude_south_america=True)
     if fig_bdr_no_sa is not None:
         st.plotly_chart(fig_bdr_no_sa, use_container_width=True)
     else:
@@ -218,7 +218,7 @@ st.subheader("Performance vs. Investment Percentage Analysis - Top 10 & Bottom 1
 row1_col1, row1_col2 = st.columns(2)
 with row1_col1:
     st.subheader("Combined w/ S.A.")
-    fig_combined_sa = analyze_performance_vs_investment_percentage(df, investment_type=None, exclude_south_america=False, num_extremes=10)
+    fig_combined_sa = plot_average_performance_vs_allocation_corrected(df, investment_type=None, exclude_south_america=False, num_extremes=10)
     if fig_combined_sa is not None:
         st.plotly_chart(fig_combined_sa, use_container_width=True)
     else:
@@ -226,7 +226,7 @@ with row1_col1:
 
 with row1_col2:
     st.subheader("Combined w/o S.A.")
-    fig_combined_no_sa = analyze_performance_vs_investment_percentage(df, investment_type=None, exclude_south_america=True, num_extremes=10)
+    fig_combined_no_sa = plot_average_performance_vs_allocation_corrected(df, investment_type=None, exclude_south_america=True, num_extremes=10)
     if fig_combined_no_sa is not None:
         st.plotly_chart(fig_combined_no_sa, use_container_width=True)
     else:
@@ -244,7 +244,7 @@ st.subheader("Performance vs. Investment Percentage Analysis - Top 5 & Bottom 5 
 row1_col1, row1_col2 = st.columns(2)
 with row1_col1:
     st.subheader("Combined w/ S.A.")
-    fig_combined_sa = analyze_performance_vs_investment_percentage(df, investment_type=None, exclude_south_america=False, num_extremes=5)
+    fig_combined_sa = plot_average_performance_vs_allocation_corrected(df, investment_type=None, exclude_south_america=False, num_extremes=5)
     if fig_combined_sa is not None:
         st.plotly_chart(fig_combined_sa, use_container_width=True)
     else:
@@ -252,7 +252,7 @@ with row1_col1:
 
 with row1_col2:
     st.subheader("Combined w/o S.A.")
-    fig_combined_no_sa = analyze_performance_vs_investment_percentage(df, investment_type=None, exclude_south_america=True, num_extremes=5)
+    fig_combined_no_sa = plot_average_performance_vs_allocation_corrected(df, investment_type=None, exclude_south_america=True, num_extremes=5)
     if fig_combined_no_sa is not None:
         st.plotly_chart(fig_combined_no_sa, use_container_width=True)
     else:
